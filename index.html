@@ -9,12 +9,16 @@
     <script src="node_modules/systemjs/dist/system.js"></script>
 </head>
 <body>
-<p>Hello Tom</p>
+<p>Hello Modules!!</p>
 <script>
     // set our baseURL reference path
     SystemJS.config({
         baseURL: '/',
-        defaultJSExtensions: true
+        packages: {
+          '/': {
+              defaultExtension: 'js'
+          }
+        }
     });
     SystemJS.import('app.js');
 </script>
